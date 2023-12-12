@@ -1,6 +1,6 @@
 import "./../scss/style.scss";
 import { IDog } from "./models/IDog";
-import { generateDogs } from "./services/axiosServices";
+import { generateDogs, getWeather } from "./services/axiosServices";
 
 const generateButton = document.getElementById("generateButton");
 

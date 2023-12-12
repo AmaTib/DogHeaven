@@ -4,8 +4,10 @@
   box-sizing: border-box;
 }
 
-section {
+section,
+header {
   height: 100vh;
+  border: 1px black solid;
 }
 
 #dogGeneratorContainer {
