@@ -4,7 +4,7 @@ import { IForecastWind } from "./IForecastWind";
 
 export interface IWeatherList {
   main: IForecastTemp;
-  weather: IForecastWeather;
+  weather: IForecastWeather[];
   wind: IForecastWind;
   dt_txt: number;
 }

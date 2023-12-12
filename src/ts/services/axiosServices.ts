@@ -12,5 +12,5 @@ export async function getWeather() {
   const url =
     "https://api.openweathermap.org/data/2.5/forecast?lat=59.3293&lon=18.0686&appid=f33fe191b722c6436a075891d213366d&units=metric&lang=sv";
   const data = get<IWeatherApiResponse>(url);
-  return data;
+  return (await data).list;
 }
