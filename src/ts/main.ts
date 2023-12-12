@@ -42,20 +42,26 @@ async function htmlForForecast() {
   const forecastsfForNow = forecastList.slice(0, 1);
 
   forecastsfForNow.forEach((forecast) => {
-    const div = document.createElement("div");
-    const div2 = document.createElement("div");
-    const div3 = document.createElement("div3");
+    const feelsLike = document.createElement("div");
+    const temprature = document.createElement("div");
+    const description = document.createElement("div");
+    const date = document.createElement("div");
+    const wind = document.createElement("div");
     const weatherIcon = document.createElement("img");
 
-    div2.innerHTML = "Temperatur: " + String(forecast.main.temp);
-    div.innerHTML = "Känns som: " + String(forecast.main.feels_like);
-    div3.innerHTML = forecast.weather[0].description;
+    date.innerHTML = String(forecast.dt_txt);
+    description.innerHTML = forecast.weather[0].description;
+    wind.innerHTML = "Vind: " + String(forecast.wind.speed) + " m/s";
+    temprature.innerHTML = "Temperatur: " + String(forecast.main.temp);
+    feelsLike.innerHTML = "Känns som: " + String(forecast.main.feels_like);
     weatherIcon.src =
       "http://openweathermap.org/img/w/" + forecast.weather[0].icon + ".png";
 
-    forecastContainer?.appendChild(div3);
-    forecastContainer?.appendChild(div2);
-    forecastContainer?.appendChild(div);
+    forecastContainer?.appendChild(date);
+    forecastContainer?.appendChild(description);
+    forecastContainer?.appendChild(wind);
+    forecastContainer?.appendChild(temprature);
+    forecastContainer?.appendChild(feelsLike);
     forecastImageContainer?.appendChild(weatherIcon);
   });
 

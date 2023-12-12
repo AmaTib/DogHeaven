@@ -1,0 +1,7 @@
+$headingFont: "Boska", serif;
+$mainFont: "Ranade", sans-serif;
+
+@mixin glow {
+  color: #bb9106;
+  text-shadow: 0 10px 20px #d5a70e;
+}

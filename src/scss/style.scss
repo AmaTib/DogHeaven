@@ -1,13 +1,59 @@
+@import "_variables.scss";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-section,
-header {
+body {
+  font-family: $mainFont;
+}
+
+section {
   height: 100vh;
   border: 1px black solid;
+}
+
+#wrapper {
+  background-image: url(/assets/puppy.jpg);
+  background-size: 140%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 80vh;
+  text-align: center;
+
+  h1,
+  h2 {
+    font-family: $headingFont;
+    font-size: 3rem;
+  }
+
+  h1 {
+    padding-top: 20px;
+  }
+  h2 {
+    @include glow;
+  }
+}
+
+nav {
+  height: 20vh;
+  background-color: rgb(239, 239, 239);
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+
+    li {
+      margin: 10px 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 #dogGeneratorContainer {
