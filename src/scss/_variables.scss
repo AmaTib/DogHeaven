@@ -1,7 +1,36 @@
 $headingFont: "Boska", serif;
 $mainFont: "Ranade", sans-serif;
 
+$blue: rgba(172, 214, 248, 0.949);
+$gold: #bb9106;
+
 @mixin glow {
   color: #bb9106;
   text-shadow: 0 10px 20px #d5a70e;
+}
+
+@mixin delayedDisplay-5s {
+  animation: delayedDisplay 5s;
+
+  @keyframes delayedDisplay {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+}
+
+@mixin delayedDisplay-3s {
+  animation: delayedDisplay 3s;
+
+  @keyframes delayedDisplay {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
 }

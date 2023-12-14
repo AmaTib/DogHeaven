@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $mainFont;
 }
@@ -17,11 +21,11 @@ section {
 
 #wrapper {
   background-image: url(/assets/puppy.jpg);
-  background-size: 140%;
+  background-size: 170%;
   background-position: bottom;
   background-repeat: no-repeat;
-  height: 80vh;
   text-align: center;
+  height: 100vh;
 
   h1,
   h2 {
@@ -30,32 +34,89 @@ section {
   }
 
   h1 {
-    padding-top: 20px;
+    padding-top: 50px;
+    @include delayedDisplay-3s;
   }
   h2 {
     @include glow;
+    @include delayedDisplay-5s;
   }
 }
 
-nav {
-  height: 20vh;
-  background-color: rgb(239, 239, 239);
+/* HAMBURGARMENY */
+header {
+  background-color: $blue;
+  position: fixed;
+  width: 100vw;
+}
+.navBar {
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
-  ul {
+  .navUl.active {
+    left: 0;
+  }
+
+  .navUl {
+    width: 100vw;
     display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    border-radius: 0 0 10px 10px;
 
-    li {
-      margin: 10px 10px;
+    position: relative;
+    left: -100%;
+    top: 128px;
+    background-color: $blue;
+
+    .navItem {
+      text-align: center;
+      width: 100%;
+      padding: 10px;
 
       &:hover {
-        cursor: pointer;
+        background-color: rgb(153, 193, 228);
+      }
+
+      .navLink {
+        color: black;
+        text-decoration: none;
       }
     }
   }
 }
 
+/* hamburgarmeny symbol */
+.hamburger {
+  cursor: pointer;
+  margin: 0 40px 0 20px;
+
+  .hamburgerLine {
+    display: block;
+    background-color: black;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    border-radius: 20px;
+  }
+}
+
+/* gör om sträcken till ett kryss när man klickat */
+.hamburger.active .hamburgerLine:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .hamburgerLine:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .hamburgerLine:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* DOG GENERATOR SECTION */
 #dogGeneratorContainer {
   display: flex;
   flex-wrap: wrap;
@@ -64,4 +125,17 @@ nav {
 
 .dogImage {
   height: 100px;
+}
+
+/* MEDIAQUERY */
+@media (min-width: 450px) {
+  #wrapper {
+    background-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #wrapper {
+    background-size: 60%;
+  }
 }

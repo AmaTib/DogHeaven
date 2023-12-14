@@ -73,3 +73,21 @@ async function htmlForForecast() {
 }
 
 htmlForForecast();
+
+/* HAMBURGERMENY */
+const hamburger = document.querySelector(".hamburger");
+const navUl = document.querySelector(".navUl");
+
+hamburger?.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navUl?.classList.toggle("active");
+
+  console.log("livstecken");
+});
+
+document.querySelectorAll(".navLink").forEach((link) =>
+  link.addEventListener("click", () => {
+    hamburger?.classList.remove("active");
+    navUl?.classList.remove("active");
+  })
+);
