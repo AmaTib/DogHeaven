@@ -23,3 +23,19 @@
     }
   }
 }
+
+@mixin dogWalker {
+  animation: dogWalkerMoving 5s ease 0s 1 normal none;
+
+  @keyframes dogWalkerMoving {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

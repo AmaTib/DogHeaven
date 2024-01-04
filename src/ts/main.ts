@@ -43,11 +43,11 @@ async function htmlForForecast() {
   const forecastsfForNow = forecastList.slice(0, 1);
 
   forecastsfForNow.forEach((forecast) => {
-    const feelsLike = document.createElement("div");
-    const temprature = document.createElement("div");
-    const description = document.createElement("div");
-    const date = document.createElement("div");
-    const wind = document.createElement("div");
+    const feelsLike = document.createElement("p");
+    const temprature = document.createElement("p");
+    const description = document.createElement("p");
+    const date = document.createElement("p");
+    const wind = document.createElement("p");
     const weatherIcon = document.createElement("img");
 
     date.innerHTML = String(forecast.dt_txt);
@@ -88,3 +88,19 @@ document.querySelectorAll(".navLink").forEach((link) =>
     navUl?.classList.remove("active");
   })
 );
+
+//DOGWALKER IMAGE
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    //If the element is visible
+    if (entry.isIntersecting) {
+      //Add the animation class
+      entry.target.classList.add("dogWalkerMoving");
+    } else {
+      entry.target.classList.remove("dogWalkerMoving");
+    }
+  });
+});
+
+const dogWalkerImg = document.getElementById("dogWalker") as HTMLImageElement;
+observer.observe(dogWalkerImg);

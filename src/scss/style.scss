@@ -21,7 +21,11 @@ section {
   border: 1px black solid;
 }
 
-//LANDINGPAGE--------------------------------
+p {
+  font-size: $textSizeForsmallScreen;
+}
+
+//LANDINGPAGE-----------------------------
 #wrapper {
   background-image: url(/assets/puppy.jpg);
   background-size: 190%;
@@ -56,9 +60,35 @@ section {
     @include delayedDisplay-5s;
   }
 }
-//LANDINGPAGE-----------------------------------
+//LANDINGPAGE-----------------------------
 
-/* DOG GENERATOR SECTION */
+//WEATHERSECTION--------------------------
+#weatherReport {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    font-size: $titleSizeForsmallScreen;
+  }
+
+  article {
+    text-align: center;
+    text-transform: capitalize;
+
+    img {
+      height: 120px;
+    }
+  }
+}
+
+.dogWalkerMoving {
+  @include dogWalker;
+}
+//WEATHERSECTION--------------------------
+
+//DOG GENERATOR SECTION-------------------
 #dogGeneratorContainer {
   display: flex;
   flex-wrap: wrap;
@@ -68,6 +98,7 @@ section {
 .dogImage {
   height: 100px;
 }
+//DOG GENERATOR SECTION-------------------
 
 /* MEDIAQUERY */
 @media (min-width: 480px) {
