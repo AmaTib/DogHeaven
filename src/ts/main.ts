@@ -34,7 +34,8 @@ function createHtmlForDogGenerator(dogs: IDog[]) {
 async function htmlForForecast() {
   const forecastList = await getWeather();
 
-  const forecastContainer = document.getElementById("forecastContainer");
+  const forecastHeader = document.getElementById("forecastHeader");
+  const forecastFooter = document.getElementById("forecastFooter");
   const forecastImageContainer = document.getElementById(
     "forecastImageContainer"
   );
@@ -57,17 +58,13 @@ async function htmlForForecast() {
     weatherIcon.src =
       "http://openweathermap.org/img/w/" + forecast.weather[0].icon + ".png";
 
-    forecastContainer?.appendChild(date);
-    forecastContainer?.appendChild(description);
-    forecastContainer?.appendChild(wind);
-    forecastContainer?.appendChild(temprature);
-    forecastContainer?.appendChild(feelsLike);
+    forecastHeader?.appendChild(date);
+    forecastHeader?.appendChild(description);
+    forecastFooter?.appendChild(wind);
+    forecastFooter?.appendChild(temprature);
+    forecastFooter?.appendChild(feelsLike);
     forecastImageContainer?.appendChild(weatherIcon);
   });
-
-  const div = document.createElement("div");
-
-  forecastContainer?.appendChild(div);
 
   console.log(forecastList);
 }

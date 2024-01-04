@@ -1,0 +1,25 @@
+@mixin delayedDisplay-5s {
+  animation: delayedDisplay 5s;
+
+  @keyframes delayedDisplay {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+}
+
+@mixin delayedDisplay-3s {
+  animation: delayedDisplay 3s;
+
+  @keyframes delayedDisplay {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+//HAMBURGARMENY
+
+header {
+  background-color: $blue;
+  position: fixed;
+  width: 100vw;
+}
+.navBar {
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .navUl.active {
+    left: 90px;
+  }
+
+  .navUl {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    border-radius: 0 0 0 10px;
+
+    position: relative;
+    right: -100%;
+    top: 128px;
+    background-color: $blue;
+
+    .navItem {
+      text-align: center;
+      width: 100%;
+      padding: 10px;
+
+      &:hover {
+        background-color: rgb(153, 193, 228);
+      }
+
+      .navLink {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* hamburgarmeny symbol */
+.hamburger {
+  cursor: pointer;
+  margin: 0 40px 0 20px;
+
+  .hamburgerLine {
+    display: block;
+    background-color: black;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    border-radius: 20px;
+  }
+}
+
+/* gör om sträcken till ett kryss när man klickat */
+.hamburger.active .hamburgerLine:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .hamburgerLine:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .hamburgerLine:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
