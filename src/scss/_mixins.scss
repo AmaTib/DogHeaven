@@ -39,3 +39,25 @@
     }
   }
 }
+
+@mixin whiteFadeBottom {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 80%,
+    rgba(255, 255, 255, 1) 99%
+  );
+}
+
+@mixin rollDice {
+  animation: myAnim 1.5s ease 0s infinite alternate forwards;
+
+  @keyframes myAnim {
+    0% {
+      transform: translateX(-20px) rotate(-100deg);
+    }
+
+    100% {
+      transform: translateX(20px) rotate(120deg);
+    }
+  }
+}

@@ -17,6 +17,7 @@ body {
 }
 
 section {
+  padding: 50px 1rem 1rem 1rem;
   height: 100vh;
   border: 1px black solid;
 }
@@ -38,11 +39,7 @@ p {
     height: 100vh;
     width: 100%;
     background: rgb(255, 255, 255);
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 85%,
-      rgba(255, 255, 255, 1) 99%
-    );
+    @include whiteFadeBottom;
   }
 
   h1,
@@ -68,9 +65,11 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   h3 {
     font-size: $titleSizeForsmallScreen;
+    color: $gold;
   }
 
   article {
@@ -89,14 +88,55 @@ p {
 //WEATHERSECTION--------------------------
 
 //DOG GENERATOR SECTION-------------------
+#dogGenerator {
+  text-align: center;
+  position: relative;
+
+  h3 {
+    font-size: $titleSizeForsmallScreen;
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+  }
+}
+
+#generateButton {
+  padding: 0.3rem 3rem 0.3rem 3rem;
+  margin: 0.9rem;
+  cursor: pointer;
+  background-color: $blue;
+  box-shadow: 0px 0px 15px 2px rgb(76, 76, 76);
+  border-style: none;
+  border-radius: 50px;
+  cursor: pointer;
+
+  #diceImage {
+    height: 50px;
+
+    &:hover {
+      @include rollDice;
+    }
+  }
+}
+
 #dogGeneratorContainer {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+  height: 70%;
+  overflow: hidden;
 }
 
 .dogImage {
-  height: 100px;
+  height: 130px;
+  border-radius: 5px;
 }
 //DOG GENERATOR SECTION-------------------
 
