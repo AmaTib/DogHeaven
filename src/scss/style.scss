@@ -19,7 +19,11 @@ body {
 section {
   padding: 50px 1rem 1rem 1rem;
   height: 100vh;
-  border: 1px black solid;
+  /* border: 1px black solid; */
+}
+
+h3 {
+  font-size: $titleSizeForsmallScreen;
 }
 
 p {
@@ -68,7 +72,6 @@ p {
   text-align: center;
 
   h3 {
-    font-size: $titleSizeForsmallScreen;
     color: $gold;
   }
 
@@ -92,10 +95,6 @@ p {
   text-align: center;
   position: relative;
 
-  h3 {
-    font-size: $titleSizeForsmallScreen;
-  }
-
   video {
     position: absolute;
     top: 0;
@@ -110,7 +109,7 @@ p {
   padding: 0.3rem 3rem 0.3rem 3rem;
   margin: 0.9rem;
   cursor: pointer;
-  background-color: $blue;
+  background-color: $gold;
   box-shadow: 0px 0px 15px 2px rgb(76, 76, 76);
   border-style: none;
   border-radius: 50px;
@@ -139,6 +138,43 @@ p {
   border-radius: 5px;
 }
 //DOG GENERATOR SECTION-------------------
+
+//MOVIE SECTION---------------------------
+#movieSection {
+  h3 {
+    margin-bottom: 1rem;
+  }
+}
+
+#movieContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
+  div {
+    width: 45%;
+    background-color: $blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: ease 0.5s;
+
+    &:hover {
+      box-shadow: 0px 5px 17px 2px rgba(8, 23, 51, 1);
+    }
+  }
+
+  img {
+    width: 90%;
+    border-radius: 0.5rem;
+    box-shadow: 0px 7px 14px -2px rgba(8, 23, 51, 1);
+  }
+}
+//MOVIE SECTION---------------------------
 
 /* MEDIAQUERY */
 @media (min-width: 480px) {

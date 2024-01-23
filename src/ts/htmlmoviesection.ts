@@ -7,15 +7,12 @@ export function htmlForMoviesTemplate(movie: IMovie) {
   const movieWrapper = document.createElement("div");
   const imgForPoster = document.createElement("img");
   const h4ForTitle = document.createElement("h4");
-  const pForYear = document.createElement("p");
 
   imgForPoster.setAttribute("src", movie.Poster);
-  h4ForTitle.innerHTML = movie.Title;
-  pForYear.innerHTML = movie.Year;
+  h4ForTitle.innerHTML = movie.Title + " " + "(" + movie.Year + ")";
 
   movieWrapper.appendChild(imgForPoster);
   movieWrapper.appendChild(h4ForTitle);
-  movieWrapper.appendChild(pForYear);
   movieContainer?.appendChild(movieWrapper);
 }
 
@@ -24,6 +21,7 @@ export async function createHtmlForMovies() {
     await generateMoviePosters("tt0110305"),
     await generateMoviePosters("tt10384944"),
     await generateMoviePosters("tt11252248"),
+    await generateMoviePosters("tt1753383"),
   ];
 
   movies.forEach((movie) => {
