@@ -61,3 +61,30 @@
     }
   }
 }
+
+@mixin pawprintsFadeIn1 {
+  animation: pawprints 3s ease 0s 1 normal none;
+
+  @keyframes pawprints {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0.6;
+    }
+  }
+}
+@mixin pawprintsFadeIn2 {
+  animation: pawprints 5s ease 0s 1 normal none;
+
+  @keyframes pawprints {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0.6;
+    }
+  }
+}
