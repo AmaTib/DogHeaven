@@ -34,6 +34,4 @@ export async function htmlForForecast() {
     forecastFooter?.appendChild(feelsLike);
     forecastImageContainer?.appendChild(weatherIcon);
   });
-
-  console.log(forecastList);
 }

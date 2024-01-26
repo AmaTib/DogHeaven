@@ -19,6 +19,5 @@ export async function getWeather() {
 export async function generateMoviePosters(movieId: string) {
   const url = "https://www.omdbapi.com/?apikey=a184af6e&i=" + movieId;
   const data = get<IMovie>(url);
-  console.log("Generated movie posters data:", data);
   return data;
 }

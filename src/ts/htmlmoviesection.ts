@@ -53,7 +53,6 @@ export async function createHtmlForMovies() {
   ];
 
   movies.forEach((movie) => {
-    console.log("Movie data:", movie);
     htmlForMoviesTemplate(movie);
   });
 }
