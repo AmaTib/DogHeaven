@@ -19,7 +19,6 @@ body {
 section {
   padding: 50px 1rem 1rem 1rem;
   height: 100vh;
-  /* border: 1px black solid; */
 }
 
 h3 {
@@ -108,18 +107,6 @@ p {
   text-align: center;
   position: relative;
   overflow: hidden;
-  /*   #videoWrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow-x: hidden;
-    z-index: -1;
-
-    video {
-      height: 100vh;
-    }
-  } */
 
   .pawprints {
     height: 300px;
@@ -201,7 +188,7 @@ p {
   gap: 1rem;
 
   div {
-    width: 45%;
+    width: 155px;
     background-color: $subduedBlue;
     display: flex;
     flex-direction: column;
