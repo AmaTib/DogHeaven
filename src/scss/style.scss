@@ -24,6 +24,8 @@ section {
 
 h3 {
   font-size: $titleSizeForsmallScreen;
+  color: $gold;
+  font-weight: 900;
 }
 
 p {
@@ -71,16 +73,27 @@ p {
   align-items: center;
   text-align: center;
 
-  h3 {
-    color: $gold;
-  }
-
   article {
     text-align: center;
     text-transform: capitalize;
 
     img {
       height: 120px;
+    }
+
+    p {
+      margin-bottom: 0.3rem;
+    }
+
+    #forecastHeader {
+      p:nth-child(2) {
+        @include backgroundGradientEdges;
+      }
+    }
+
+    #forecastFooter {
+      @include backgroundGradientEdges;
+      margin-top: 1rem;
     }
   }
 }
@@ -177,7 +190,7 @@ p {
 //MOVIE SECTION---------------------------
 #movieSection {
   h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -189,13 +202,13 @@ p {
 
   div {
     width: 45%;
-    background-color: $blue;
+    background-color: $subduedBlue;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     padding: 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     transition: ease 0.5s;
 
     &:hover {
@@ -204,12 +217,14 @@ p {
 
     h4 {
       text-align: center;
+      font-size: 1rem;
     }
 
     img {
-      width: 90%;
-      border-radius: 0.5rem;
+      width: 80%;
+      border-radius: 0.2rem;
       box-shadow: 0px 5px 14px -2px rgba(8, 23, 51, 1);
+      margin-bottom: 0.8rem;
     }
   }
 }
