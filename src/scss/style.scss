@@ -228,6 +228,12 @@ p {
   #wrapper {
     background-size: 100%;
   }
+
+  #movieContainer {
+    div {
+      width: 40%;
+    }
+  }
 }
 
 @media only screen and (min-width: 1024px) {
