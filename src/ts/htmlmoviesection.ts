@@ -20,6 +20,10 @@ export function htmlForMoviesTemplate(movie: IMovie) {
 
   movieWrapper.addEventListener("click", () => {
     const modalBody = document.getElementById("modalBody");
+    if (modalBody) {
+      modalBody.innerHTML = "";
+    }
+
     const modalTitle = document.getElementById(
       "modalTitle"
     ) as HTMLHeadingElement;
