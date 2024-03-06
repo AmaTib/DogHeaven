@@ -215,6 +215,11 @@ p {
     }
   }
 }
+
+footer {
+  height: 100px;
+  background-color: $blue;
+}
 //MOVIE SECTION---------------------------
 
 /* MEDIAQUERY */
@@ -230,8 +235,9 @@ p {
   }
 
   #movieContainer {
+    gap: 2rem;
     div {
-      width: 40%;
+      width: 200px;
     }
   }
 }
