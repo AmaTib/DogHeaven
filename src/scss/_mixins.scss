@@ -3,8 +3,8 @@
   text-shadow: 0 10px 20px #d5a70e;
 }
 
-@mixin delayedDisplay-5s {
-  animation: delayedDisplay 5s;
+@mixin delayedDisplay-7s {
+  animation: delayedDisplay 7s;
 
   @keyframes delayedDisplay {
     0% {
@@ -16,8 +16,8 @@
   }
 }
 
-@mixin delayedDisplay-3s {
-  animation: delayedDisplay 3s;
+@mixin delayedDisplay-2s {
+  animation: delayedDisplay 2s;
 
   @keyframes delayedDisplay {
     0% {
